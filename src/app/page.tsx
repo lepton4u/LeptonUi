@@ -167,6 +167,7 @@ export default function LeptonStarWebsite() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 {/* Logo can go here if available */}
+                <Image src="/logo.png" alt="Logo" width={60} height={60} />
                 <h1 className="text-2xl font-medium">
                   Lepton Star Private Limited ®
                   {/* <AnimatedGradientText className="bg-clip-text animate-shiny-text">
@@ -268,7 +269,7 @@ export default function LeptonStarWebsite() {
               {/* <Building2 className="h-12 w-12 text-blue-300" /> */}
 
               <div>
-                <AuroraText className="text-5xl font-extrabold mb-14 mt-14">
+                <AuroraText className="text-5xl font-extrabold mb-14 mt-10">
                   Building Dreams, One Brick at a Time.
                 </AuroraText>
                 {/* <h1 >Building Dreams, One Brick at a Time.</h1> */}
@@ -277,7 +278,7 @@ export default function LeptonStarWebsite() {
                 </h1>
                 <div className="h-12"></div>
                 {/* <h1 className="text-4xl lg:text-6xl font-bold">Lepton Star Private Limited</h1> */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-6">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-2">
                   <div className="flex flex-col items-center">
                     <NumberTicker
                       value={20}
@@ -442,7 +443,7 @@ export default function LeptonStarWebsite() {
       </section>
 
       {/* What We Do */}
-      <section id="services" className=" pt-16 bg-gray-50">
+      <section id="services" className=" pt-16 bg-gray-100 pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-3">
@@ -799,7 +800,7 @@ export default function LeptonStarWebsite() {
       </section>
 
       {/* Projects Showcase */}
-      <section id="projects" className="py-16 bg-gray-50">
+      <section id="projects" className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-3">
@@ -861,6 +862,9 @@ export default function LeptonStarWebsite() {
           </div>
           <div className="text-center mt-10">
             <div className="flex-row">
+            <ShinyButton className="mb-5">
+              <span className="flex-row">And many more projects</span>
+            </ShinyButton>
               <div className="z-10 flex  items-center justify-center">
                 <div className="group relative mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f] ">
                   <span
@@ -876,6 +880,7 @@ export default function LeptonStarWebsite() {
                       WebkitClipPath: "padding-box",
                     }}
                   />
+                  
                   📞 <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
                   <AnimatedGradientText className="text-sm font-medium">
                     Primary points of contact
@@ -888,18 +893,13 @@ export default function LeptonStarWebsite() {
               </div>
               <div className="m-1">Irshad Khan (+91 8757420727) <br />Sushil sharma (+91 8810942062) </div> <br />
             </div>
-
-            <br />
-            <br />
-            <ShinyButton>
-              <span className="flex-row">And many more projects</span>
-            </ShinyButton>
+            
           </div>
         </div>
       </section>
 
       {/* Meet the Team */}
-      <section id="team" className="py-16 bg-white">
+      <section id="team" className="pb-16 pt-10 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-12">
