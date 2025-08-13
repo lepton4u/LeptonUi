@@ -215,42 +215,67 @@ export default function LeptonStarWebsite() {
             </div>
 
             {/* Mobile Navigation */}
-            {isMenuOpen && (
-              <nav className="md:hidden mt-4 pb-4 border-t pt-4">
-                <div className="flex flex-col space-y-4">
+            <div 
+              className={`fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
+                isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+              }`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <nav 
+                className={`fixed left-0 top-0 h-full w-4/5 max-w-sm bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
+                  isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+                }`}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="p-4 border-b border-gray-200 flex justify-between items-center">
+                  <span className="text-lg font-semibold text-gray-900">Menu</span>
+                  <button 
+                    onClick={() => setIsMenuOpen(false)}
+                    className="p-2 rounded-full hover:bg-gray-100"
+                    aria-label="Close menu"
+                  >
+                    <X className="h-5 w-5 text-gray-700" />
+                  </button>
+                </div>
+                <div className="flex flex-col p-4 space-y-3">
                   <Link
                     href="#about"
-                    className="text-gray-700 hover:text-blue-600 transition-colors"
+                    className="px-4 py-3 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium"
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     About
                   </Link>
                   <Link
                     href="#services"
-                    className="text-gray-700 hover:text-blue-600 transition-colors"
+                    className="px-4 py-3 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium"
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     Services
                   </Link>
                   <Link
                     href="#projects"
-                    className="text-gray-700 hover:text-blue-600 transition-colors"
+                    className="px-4 py-3 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium"
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     Projects
                   </Link>
                   <Link
                     href="#team"
-                    className="text-gray-700 hover:text-blue-600 transition-colors"
+                    className="px-4 py-3 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium"
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     Team
                   </Link>
                   <Link
                     href="#contact"
-                    className="text-gray-700 hover:text-blue-600 transition-colors"
+                    className="px-4 py-3 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium"
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     Contact
                   </Link>
                 </div>
               </nav>
-            )}
+            </div>
           </div>
         </header>
 
@@ -313,7 +338,7 @@ export default function LeptonStarWebsite() {
             {/* <p className="text-xl lg:text-2xl mb-8 text-blue-100">
               Building Dreams, One Brick at a Time
             </p> */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 mb-4 justify-center">
               <Button
                 size="lg"
                 className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white px-8 py-3"
@@ -344,7 +369,7 @@ export default function LeptonStarWebsite() {
       </section>
 
       {/* About Us */}
-      <section id="about" className="py-16 bg-gray-50">
+      <section id="about" className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
@@ -624,7 +649,7 @@ export default function LeptonStarWebsite() {
       </section>
 
       {/* Additional Services */}
-      <section className="bg-gray-50 pt-8">
+      <section className="pt-8 mt-10">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Specialized Manpower Supply */}
@@ -926,7 +951,7 @@ export default function LeptonStarWebsite() {
       </section>
 
       {/* Clients & Partners */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-4">
